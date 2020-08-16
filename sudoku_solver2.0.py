@@ -52,7 +52,7 @@ class BacktrackingPuzzleSolver(object):
             return state
         else:
             legalMoves = self.getLegalMoves(state)
-            for i in range(len(legalMoves)):
+            for i in range(len(legalMoves)): # the loop is modified based on the original backtracking solver
                 for k in range(2, len(legalMoves[i])): # [x, y,nums]
                     move = legalMoves[i][0:2]
                     move.append(legalMoves[i][k]) #[x, y, num]
